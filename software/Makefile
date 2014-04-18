@@ -15,7 +15,7 @@ all: blinkie.bin
 	chmod -x $@
 
 %.fbi: %.bin
-	$(MSCDIR)/tools/mkmscimg $< write $@
+	$(MSCDIR)/mkmscimg.py -f -o $@ $<
 
 blinkie.elf: $(OBJECTS) libs
 
